@@ -1,0 +1,103 @@
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #667070;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.doc {
+  color: #00a892;
+}
+
+.group {
+  color: #999;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #999;
+  font-weight: 500;
+}
+
+nav a:first-child {
+  color: #00a892;
+}
+
+.intro {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.icon {
+  width: 40px;
+  margin-bottom: 20px;
+}
+
+.intro h1 {
+  color: #00a892;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.intro-text {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 0 10%;
+  text-align: left;
+}
+
+.intro-text p {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.card {
+  flex: 1;
+  max-width: 300px;
+  padding: 25px;
+  border-radius: 10px;
+  color: white;
+}
+
+.green {
+  background-color: #00a892;
+}
+
+.blue {
+  background-color: #3d83df;
+}
+
+.dark {
+  background-color: #1b2734;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 16px;
+}
