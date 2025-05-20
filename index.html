@@ -16,6 +16,7 @@
 
 <!-- Body -->
 <body>
+<div class="main-container">
   <!-- NavBar -->
   <header class="main-header">
     <div class="container">
@@ -24,7 +25,7 @@
       </a>
       <nav class="main-nav">
         <ul>
-          <li><a href="index.html">About us</a></li>
+          <li><a href="index.html" class="active">About us</a></li>
           <li><a href="https://www.docplanner.com/career">Career</a></li>
           <li><a href="#">Departments</a></li>
         </ul>
@@ -33,10 +34,10 @@
   </header>
 
   <!-- Main contain -->
-  <section class="hero">
+  <section class="people">
   <img src="https://cdn.brandfetch.io/idzhDUhS2h/w/456/h/435/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1695042641538" alt="Logo Symbol" class="center-logo" />
   <h1>Helping people live longer, healthier lives</h1>
-    <div class="hero-text">
+    <div class="people-text">
       <p>
       Docplanner is creating a healthcare ecosystem that seamlessly connects patients with doctors while 
       integrating smart tools to provide quicker, more precise diagnoses and treatments, with the goal of 
@@ -51,96 +52,98 @@
   </section>
 
   <!-- Services -->
-  <section class="services">
-    <div class="services-container">
-      <!-- Box1 : For patients -->
-      <div class="service-box box-patients">
-        <img src="https://www.docplanner.com/icons/icon-patients.svg" alt="Patients" />
-        <h2>For patients</h2>
-        <p>
-          Find a doctor, book a visit and solve any health-related doubt.
-        </p>
-        <select>
-          <option>Choose country</option>
-          <option>Argentina</option>
-          <option>Brazil</option>
-          <option>Chile</option>
-          <option>Colombia</option>
-          <option>Czech</option>
-          <option>Germany</option>
-          <option>Italy</option>
-          <option>Mexico</option>
-          <option>Peru</option>
-          <option>Poland</option>
-          <option>Portugal</option>
-          <option>Spain</option>
-          <option>Turkey</option>
-        </select>
-      </div>
-
-      <!-- Box 2: For doctors -->
-      <div class="service-box box-doctors">
-        <img src="https://www.docplanner.com/icons/icon-doctors.svg" alt="Doctors" />
-        <h2>For doctors</h2>
-        <p>
-          Save time managing visits and cut no-shows by half.
-        </p>
-        <select>
-          <option>Choose country</option>
-          <option>Argentina</option>
-          <option>Brazil</option>
-          <option>Chile</option>
-          <option>Colombia</option>
-          <option>Czech</option>
-          <option>Germany</option>
-          <option>Italy</option>
-          <option>Mexico</option>
-          <option>Peru</option>
-          <option>Poland</option>
-          <option>Portugal</option>
-          <option>Spain</option>
-          <option>Turkey</option>
-        </select>
-      </div>
-
-      <!-- Box 3 : for clinics -->
-      <div class="service-box box-clinics">
-        <img src="https://www.docplanner.com/icons/icon-clinics.svg" alt="Clinics" />
-        <h2>For clinics</h2>
-        <p>
-          Deliver an exceptional patient experience in your clinic.
-        </p>
-        <select>
-          <option>Choose country</option>
-          <option>Brazil</option>
-          <option>Czech</option>
-          <option>Italy</option>
-          <option>Mexico</option>
-          <option>Poland</option>
-          <option>Spain</option>
-          <option>Turkey</option>
-        </select>
-      </div>
+<section class="services">
+  <!-- Box 1: For patients -->
+  <div class="service-box patients">
+    <img src="https://www.docplanner.com/icons/icon-patients.svg" alt="For patients">
+    <h2>For patients</h2>
+    <p>Find a doctor, book a visit and solve any health-related doubt</p>
+    <div class="country-select">
+      <select>
+        <option>Select country</option>
+        <option>Argentina</option>
+        <option>Brazil</option>
+        <option>Chile</option>
+        <option>Colombia</option>
+        <option>Czech</option>
+        <option>Germany</option>
+        <option>Italy</option>
+        <option>Mexico</option>
+        <option>Peru</option>
+        <option>Poland</option>
+        <option>Portugal</option>
+        <option>Spain</option>
+        <option>Turkey</option>
+      </select>
     </div>
-  </section>
+  </div>
+
+  <!-- Box 2: For doctors -->
+  <div class="service-box doctors">
+    <img src="https://www.docplanner.com/icons/icon-doctors.svg" alt="For doctors">
+    <h2>For doctors</h2>
+    <p>Save time managing visits and cut no-shows by half</p>
+    <div class="country-select">
+      <select>
+        <option>Choose country</option>
+        <option>Argentina</option>
+        <option>Brazil</option>
+        <option>Chile</option>
+        <option>Colombia</option>
+        <option>Czech</option>
+        <option>Germany</option>
+        <option>Italy</option>
+        <option>Mexico</option>
+        <option>Peru</option>
+        <option>Poland</option>
+        <option>Portugal</option>
+        <option>Spain</option>
+        <option>Turkey</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Box 3: For clinics -->
+  <div class="service-box clinics">
+    <img src="https://www.docplanner.com/icons/icon-clinics.svg" alt="For clinics">
+    <h2>For clinics</h2>
+    <p>Deliver an exceptional patient experience in your clinic</p>
+    <div class="country-select">
+      <select>
+        <option>Choose your option</option>
+        <option>Brazil</option>
+        <option>Poland</option>
+        <option>Spain</option>
+        <option>Turkey</option>
+      </select>
+    </div>
+  </div>
+</section>
+
 
   <!-- Companies -->
-  <section class="global-message">
-    <p>We are a global<br>company<br>with local culture</p>
-    <div class="logos">
-      <span>ZnanyLekarz</span>
-      <span>Doctoralia</span>
-      <span>MioDottore</span>
-      <span>DoktorTakvimi</span>
-      <span>ZnanyLekar</span>
-      <span>jameda</span>
-      <span>TUOTEMPO</span>
-      <span>gipo</span>
-      <span>Clinic Cloud</span>
-      <span>feegow</span>
-      <span>MyDrEDM</span>
-    </div>
-  </section>
+<section class="global-partners">
+  <div class="left">
+    <h2>
+      We are a global <br>
+      company<br>
+      with local culture
+    </h2>
+  </div>
+  <div class="right">
+    <a href="https://www.znanylekarz.pl"><img src="data:image/png;base64,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" alt="ZnanyLekarz"></a>
+    <a href="https://www.doctoralia.es"><img src="https://logowik.com/content/uploads/images/doctoralia2018.jpg" alt="Doctoralia"></a>
+    <a href="https://www.miodottore.it"><img src="https://www.sanita-digitale.com/files/2019/02/logo-mktpl-miodottore-color-1.png" alt="MioDottore"></a>
+    <a href="https://www.doktortakvimi.com"><img src="https://seeklogo.com/images/D/doktor-takvimi-logo-1182C96A43-seeklogo.com.png" alt="DoktorTakvimi"></a>
+    <a href="https://www.znamylekar.cz/?__hstc=94104962.11acc5dfefad2cfcaf30d620ef7e58ff.1747578088393.1747673333268.1747737858601.8&__hssc=94104962.1.1747737858601&__hsfp=3146960943"><img src="https://images.seeklogo.com/logo-png/48/1/znanylekarz-logo-png_seeklogo-488729.png" alt="ZnanyLekar"></a>
+    <a href="https://www.jameda.de"><img src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2023/03/jameda-logo-w-440x330.jpg" alt="jameda"></a>
+    <a href="https://www.tuotempo.com"><img src="https://logowik.com/content/uploads/images/tuotempo4790.jpg" alt="TUOTEMPO"></a>
+    <a href="https://www.gipo.it"><img src="https://docplanner-gomycode.onrender.com/Countrylogos/logo-gipo-primary.svg" alt="gipo"></a>
+    <a href="https://clinic-cloud.com/?__hstc=94104962.11acc5dfefad2cfcaf30d620ef7e58ff.1747578088393.1747673333268.1747737858601.8&__hssc=94104962.1.1747737858601&__hsfp=3146960943"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBX_SNgWKinZ2K48dx5AkBRTM2kkRy24hKnQ&s" alt="Clinic Cloud"></a>
+    <a href="https://www.feegow.com.br"><img src="https://cdn.healthtechalpha.com/static/resized/social_media_image/startup_data_images/66978.png" alt="feegow"></a>
+    <a href="https://mydr.pl/welcome/"><img src="https://prowly-prod.s3.eu-west-1.amazonaws.com/uploads/2033/assets/500285/large-db5b2bfee846129bcf75428702f01855.png" alt="MyDrEDM"></a>
+  </div>
+</section>
 
   <!-- healthcare platform -->
   <section class="platform-section">
@@ -174,7 +177,6 @@
     </div>
   </div>
 </section>
-
 
   <!-- Lives -->
   <section class="careers">
@@ -314,6 +316,6 @@
       www.docplanner.com © 2025 
     </div>
   </footer>
-
+</div>
 </body>
 </html>

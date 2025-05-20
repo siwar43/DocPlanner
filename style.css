@@ -29,7 +29,6 @@ body {
   height: 23px;
   width: 266px;
 }
-
 .main-header {
     background: #fffffffa;
     left: 0;
@@ -39,6 +38,10 @@ body {
     width: 100%;
     z-index: 3;
 
+}
+
+.main-nav a.active {
+  color: #00b39b; /* vert permanent */
 }
 .main-nav ul {
   list-style: none;
@@ -83,13 +86,13 @@ body {
   text-decoration: none;
 }
 
-/* Section Hero */
-.hero {
+/* People */
+.people {
   color: #667070;
   text-align: center;
   padding: 75px 20px;
 }
-.hero h1 {
+.people h1 {
   color:#00a892;
   font-size: 25px;
   font-weight: 300;
@@ -99,8 +102,7 @@ body {
   margin-right: auto;
   line-height: 1.3;
 }
-
-.hero-text {
+.people-text {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -108,8 +110,7 @@ body {
   max-width: 900px;
   margin: 0 auto;
 }
-
-.hero-text p {
+.people-text p {
   font-family: Roboto, Arial, sans-serif;;
   color: #667070;
   width: 400px;
@@ -119,25 +120,16 @@ body {
   text-align: left;
 }
 
-
-/* Section Services / Cartes colorées */
+/* Services */
 .services {
   display: flex;
   justify-content: center;
   gap: 30px;
+  padding: 0px 20px;
   flex-wrap: wrap;
   max-width: 1200px;
   margin: auto;
 }
-
-.services-container {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  justify-content: center;
-}
-
 .service-box {
   width: 250px;
   padding: 30px 25px;
@@ -148,63 +140,102 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: left;
   transition: transform 0.3s ease;
+  position: relative;
 }
-
-
-.service-box:hover {
-  transform: translateY(-5px);
-}
-
 .service-box img {
-  width: 20px;
-  margin-bottom: 0px;
+  width: 25px;
+  margin-bottom: 20px;
 }
-
 .service-box h2 {
   font-size: 22px;
   margin-bottom: 10px;
   font-weight: 400;
 }
-
 .service-box p {
   font-size: 16px;
   line-height: 1.5;
   color: #fff;
 }
-
-.service-box select {
+.country-select {
+  margin-top: 20px;
+}
+.country-select select {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   border-radius: 5px;
   border: none;
-  color:#667070;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 15px;
+  color: #fff;;
+  background-color: transparent; 
 }
-
-/* Couleurs des cartes */
-.box-patients {
-  background-color: #00ccb1;
+.patients {
+  background-color: #00b39b;
 }
-
-.box-doctors {
+.doctors {
   background-color: #3d83df;
 }
-
-.box-clinics {
+.clinics {
   background-color: #1b2734;
 }
-.global-message {
+.service-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Companies */
+.global-partners {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+  color: #00b39b;
+  font-family: 'Work Sans', sans-serif;
+  flex-wrap: wrap;
+  
+}
+.global-partners .left {
+  flex: 1;
+  max-width: 300px;
+}
+.global-partners .left h2 {
+  font-size:  1.625em;
+  line-height: 1.5;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+}
+.global-partners .right {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px 40px;
+  align-items: center;
+  justify-items: start;
+}
+.global-partners .right a img {
+  max-width: 100%;
+  max-height: 40px;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+.global-partners .right a img:hover {
+  filter: none;
+  opacity: 1;
+}
+.global-companies {
   text-align: center;
   margin: 60px auto;
 }
-
-.global-message p {
+.global-companies p {
   color: #00b39b;
   font-size: 24px;
   line-height: 1.5;
   font-weight: 300;
   margin-bottom: 30px;
 }
-
 .logos {
   display: flex;
   justify-content: center;
@@ -213,93 +244,109 @@ body {
   color: #bfbfbf;
   font-size: 18px;
 }
+
+/* healthcare platform */
+/* Styling for the platform section */
 .platform-section {
-  background: linear-gradient(to right top, #dff6f5, #ebf9f8);
-  padding: 30px 20px;
-  font-family: 'Work Sans', sans-serif;
+  background-color: #e5faf8; /* Light teal background as in the image */
+  padding: 50px 0; /* Vertical padding for spacing */
+  position: relative;
+  overflow: hidden; /* To handle any overflow */
 }
 
+/* Container for the content */
 .platform-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-  flex-wrap: wrap;
+  max-width: 1200px; /* Standard container width */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Horizontal padding */
 }
 
+/* Left side styling */
 .platform-left {
   flex: 1;
-  min-width: 320px;
-  max-width: 500px;
+  padding-right: 40px;
+  position: relative;
+  text-align: left;
+  margin-top: -150px; /* Test temporaire */
 }
 
 .platform-title {
-  color: #00b39b;
-  font-size: 34px;
   font-weight: 300;
-  line-height: 1.3;
+  line-height: 1.2;
   margin-bottom: 20px;
+  margin-left: 150px; /* 👈 Décale le titre vers la droite */
+  color: #00a892;
+  font-size: 2.125rem;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .platform-desc {
-  color: #747474;
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 40px;
+  color: #747474; /* Grayish text color */
+  margin-bottom: 40px; /* Space below the description */  
+  font-size: .875em;
+  font-weight: 500;
+  line-height: 1.7142857143;
+  max-width: 415px;
+  margin-left: 150px; /* 👈 Décale le titre vers la droite */
 }
-
 .platform-icon {
-  width: 60%;
-  max-width: 280px;
+    width: 355px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    left: 36%;
+    transform: translateX(-50%);
+    bottom: -330px;
+    font-family: 'Work Sans', sans-serif;
 }
 
+/* Right side styling */
 .platform-right {
-  display: grid;
-  grid-template-columns: repeat(2, 235px);
-  grid-template-rows: auto auto;
-  gap: 20px;
-  justify-content: center;
   flex: 1;
-  min-width: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 30px; /* Space between stat boxes */
 }
 
+/* Stat box styling */
 .stat-box {
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 30px 20px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
-  text-align: center;
+  background-color: #fff; /* White background for stat boxes */
+  padding: 20px; /* Inner padding */
+  border-radius: 5px; /* Slightly rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center the content */
 }
 
 .stat-box img {
-  width: 25px;
-  margin-bottom: 15px;
+  width: 30px; /* Icon size */
+  height: auto;
+  margin-bottom: 15px; /* Space below the icon */
 }
 
 .stat-box h3 {
-  color: #00b39b;
-  font-size: 22px;
-  font-weight: 300;
-  margin-bottom: 10px;
-  line-height: 1.3;
+  font-size: 20px; /* Stat title font size */
+  font-weight: 500; /* Medium font weight */
+  color: #00ccb1; /* Teal color for the stat numbers */
+  margin-bottom: 10px; /* Space below the stat title */
 }
 
 .stat-box p {
-  color: #747474;
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 14px; /* Smaller font for the description */
+  color: #747474; /* Grayish text color */
+  line-height: 1.4; /* Comfortable line height */
 }
 
-
+/* Lives */
 .careers {
   padding: 80px 20px;
   text-align: center;
   display: flex;
   justify-content: center;
 }
-
 .careers-wrapper {
   max-width: 1100px;
   margin: 0 auto;
@@ -308,26 +355,23 @@ body {
   gap: 50px;
   align-items: center;
 }
-
 .careers-text {
   flex: 1 1 40%;
   min-width: 300px;
 }
-
 .careers-text h1 {
-  font-size: 2.3rem;
+  font-size: 25px;
   color: #00a892;
   font-weight: 300;
   margin-bottom: 20px;
   line-height: 1.2;
+  
 }
-
 .careers-text p {
-  font-size: 16px;
+  font-size: 12px;
   color: #667070;
   line-height: 1.6;
 }
-
 .careers-boxes {
   flex: 1 1 55%;
   display: flex;
@@ -335,7 +379,6 @@ body {
   gap: 20px;
   min-width: 300px;
 }
-
 .careers-box {
   background-color: #fff;
   border-radius: 10px;
@@ -343,50 +386,45 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
   text-align: left;
 }
-
 .careers-box img {
   width: 30px;
   margin-bottom: 15px;
 }
-
 .careers-box h2 {
   font-size: 18px;
   color: #00a892;
   font-weight: 400;
   margin-bottom: 10px;
 }
-
 .careers-box p {
   font-size: 14px;
   color: #667070;
   line-height: 1.5;
 }
 
+
+/* Cities */
 .cities {
   padding: 0px 20px;
   text-align: center;
   display: flex;
   justify-content: center;
 }
-
 .cities-wrapper {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .cities h1 {
   font-size: 18px;
   color: #00a892;
   font-weight: 300;
   margin-bottom: 50px;
 }
-
 .cities-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 30px;
 }
-
 .city-box {
   background-color: #f6f8f9;
   border-radius: 10px;
@@ -396,19 +434,16 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-
 .city-box img {
   width: 100%;
   display: block;
 }
-
 .city-info {
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .city-info h3 {
   margin: 0;
   color: #667070;
@@ -418,7 +453,6 @@ body {
   line-height: 1.6666666667;
   padding: 1.1111111111em;
 }
-
 .city-info .btn {
   background-color: #3d83df;
   color: #fff;
@@ -435,24 +469,23 @@ body {
   position: relative;
   vertical-align: middle;
 } 
-
 .city-info .btn:hover {
   background-color: #286dc0;
 }
 
+
+/* Join Us */
 .join-section {
   padding: 70px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .join-container {
   text-align: center;
   max-width: 900px;
   width: 100%;
 }
-
 .join-title {
     color: #333;
     font-size: 1.1428571429em;
@@ -460,7 +493,6 @@ body {
     font-style: normal;
     font-weight: normal;
 }
-
 .join-btn {
   font-family: Roboto, Arial, sans-serif;
   display: inline-block;
@@ -474,11 +506,12 @@ body {
   text-transform: uppercase;
   transition: background-color 0.3s ease;
 }
-
 .join-btn:hover {
   background-color: #e2eafc;
 }
 
+
+/* Main Footer */
 .main-footer {
     font-family: Roboto, Arial, sans-serif;
     border-top: 1px solid #eef2f2;
@@ -487,7 +520,6 @@ body {
     font-size: 10px;
     color: #ababab;
 }
-
 footer a {
   color: #3d83df;
   text-decoration: none;
