@@ -25,6 +25,7 @@ body {
   padding: 15px 80px;
 }
 
+/* Logo Docplanner */
 .logo img {
   height: 23px;
   width: 266px;
@@ -39,9 +40,8 @@ body {
     z-index: 3;
 
 }
-
 .main-nav a.active {
-  color: #00b39b; /* vert permanent */
+  color: #00b39b;
 }
 .main-nav ul {
   list-style: none;
@@ -82,7 +82,7 @@ body {
 }
 
 .description a {
-  color: #3d83df;
+  color: #3d83df;;
   text-decoration: none;
 }
 
@@ -114,10 +114,15 @@ body {
   font-family: Roboto, Arial, sans-serif;;
   color: #667070;
   width: 400px;
-  font-size: 12px;
+  font-size: 13.2px;
   font-weight: 400;
   line-height: 1.75;
   text-align: left;
+}
+.people-text p a {
+  color: #3d83df;
+  outline: 0;
+  text-decoration: none;
 }
 
 /* Services */
@@ -144,11 +149,11 @@ body {
 }
 .service-box img {
   width: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 .service-box h2 {
   font-size: 22px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   font-weight: 400;
 }
 .service-box p {
@@ -157,7 +162,7 @@ body {
   color: #fff;
 }
 .country-select {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .country-select select {
   width: 100%;
@@ -165,7 +170,7 @@ body {
   border-radius: 5px;
   border: none;
   font-family: 'Work Sans', sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   color: #fff;;
   background-color: transparent; 
 }
@@ -183,114 +188,120 @@ body {
 }
 
 /* Companies */
-.global-partners {
+.global-section {
+  padding: 30px 0;
+}
+.global-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 80px auto;
-  padding: 0 20px;
-  color: #00b39b;
-  font-family: 'Work Sans', sans-serif;
-  flex-wrap: wrap;
-  
-}
-.global-partners .left {
-  flex: 1;
-  max-width: 300px;
-}
-.global-partners .left h2 {
-  font-size:  1.625em;
-  line-height: 1.5;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 300;
-}
-.global-partners .right {
-  flex: 2;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 30px 40px;
+  justify-content: flex-start; 
   align-items: center;
-  justify-items: start;
+  max-width: 1200px;
+  margin: 30px auto; 
+  padding: 0 20px; 
 }
-.global-partners .right a img {
-  max-width: 100%;
-  max-height: 40px;
-  filter: grayscale(100%);
-  opacity: 0.8;
-  transition: all 0.3s ease;
+
+/* Partie gauche */
+.global-left {
+  flex: 1;
+  padding-right: 20px; 
 }
-.global-partners .right a img:hover {
-  filter: none;
-  opacity: 1;
+.global-title {
+  font-size: 1.626em; 
+  font-weight: 200;
+  line-height: 1.2; 
+  color: #00a892;
+  margin-left: 190px;
+  margin-bottom: 10px;
 }
-.global-companies {
-  text-align: center;
-  margin: 60px auto;
+
+/* Partie droite */
+.global-right {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3px;
+  justify-items: flex-start;
+  align-items: center;
+  margin-right: 182px;
+  font-size: 0;
+  margin-top: -30px;
 }
-.global-companies p {
-  color: #00b39b;
-  font-size: 24px;
-  line-height: 1.5;
-  font-weight: 300;
-  margin-bottom: 30px;
-}
-.logos {
-  display: flex;
+.logo-item {
+  display: inline-flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  color: #bfbfbf;
-  font-size: 18px;
+  align-items: center;
+  margin-right: 0px;
+  padding: 0; 
+  position: relative; 
+}
+.logo-item img {
+  max-width: 100px; 
+  height: auto;
+  opacity: 0.6; 
+  filter: grayscale(100%); 
+  transition: opacity 0.3s ease, filter 0.3s ease; 
+  vertical-align: middle;
+}
+/* Hover effect with overlay */
+.logo-item:hover img {
+  opacity: 1; 
+  filter: grayscale(0%);
+}
+/* Overlay for green tint */
+.logo-item:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5; 
+  mix-blend-mode: multiply; 
+  transition: opacity 0.3s ease;
 }
 
 /* healthcare platform */
-/* Styling for the platform section */
 .platform-section {
-  background-color: #e5faf8; /* Light teal background as in the image */
-  padding: 50px 0; /* Vertical padding for spacing */
+  background-color: #e5faf8;
+  padding: 20px 0; 
   position: relative;
-  overflow: hidden; /* To handle any overflow */
+  overflow: hidden; /* To handle overflow */
 }
-
-/* Container for the content */
 .platform-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 1200px; /* Standard container width */
-  margin: 0 auto; /* Center the container */
-  padding: 0 20px; /* Horizontal padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 200px;
 }
-
-/* Left side styling */
 .platform-left {
   flex: 1;
   padding-right: 40px;
   position: relative;
   text-align: left;
-  margin-top: -150px; /* Test temporaire */
+  margin-top: -200px; /* hethi bech ntala3 beha partie à gauche lfoug */
 }
 
 .platform-title {
   font-weight: 300;
   line-height: 1.2;
   margin-bottom: 20px;
-  margin-left: 150px; /* 👈 Décale le titre vers la droite */
+  margin-left: 10px; /* Décale le titre vers la droite */
   color: #00a892;
-  font-size: 2.125rem;
+  font-size: 25px;
   font-family: 'Work Sans', sans-serif;
+  word-spacing: 2px;
 }
 
 .platform-desc {
-  color: #747474; /* Grayish text color */
-  margin-bottom: 40px; /* Space below the description */  
+  color: #747474; 
+  margin-bottom: 40px;  
   font-size: .875em;
   font-weight: 500;
   line-height: 1.7142857143;
   max-width: 415px;
-  margin-left: 150px; /* 👈 Décale le titre vers la droite */
+  margin-left: 10px;
 }
 .platform-icon {
     width: 355px;
@@ -298,51 +309,46 @@ body {
     display: block;
     margin: 0 auto;
     position: absolute;
-    left: 36%;
+    left: 20%;
     transform: translateX(-50%);
-    bottom: -330px;
+    bottom: -350px;
     font-family: 'Work Sans', sans-serif;
 }
-
-/* Right side styling */
 .platform-right {
-  flex: 1;
+  flex: 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns */
-  gap: 30px; /* Space between stat boxes */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* Space between stat boxes */
 }
-
-/* Stat box styling */
 .stat-box {
-  background-color: #fff; /* White background for stat boxes */
-  padding: 20px; /* Inner padding */
-  border-radius: 5px; /* Slightly rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  text-align: center; /* Center the content */
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
+    text-align: center;
+    width: 165px;
+    height: 217px;
 }
-
 .stat-box img {
-  width: 30px; /* Icon size */
+  width: 30px;
   height: auto;
-  margin-bottom: 15px; /* Space below the icon */
+  margin-bottom: 15px; 
 }
-
 .stat-box h3 {
-  font-size: 20px; /* Stat title font size */
-  font-weight: 500; /* Medium font weight */
-  color: #00ccb1; /* Teal color for the stat numbers */
-  margin-bottom: 10px; /* Space below the stat title */
+  font-weight: 500;
+  margin-bottom: 10px; 
+  color: #00a892;
+  font-size: 20px;
 }
-
 .stat-box p {
-  font-size: 14px; /* Smaller font for the description */
-  color: #747474; /* Grayish text color */
-  line-height: 1.4; /* Comfortable line height */
+  color: #747474; 
+  font-size: .8125em;
+  line-height: 1.3;
 }
 
 /* Lives */
 .careers {
-  padding: 80px 20px;
+  padding: 55px 20px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -365,6 +371,7 @@ body {
   font-weight: 300;
   margin-bottom: 20px;
   line-height: 1.2;
+  font-family: Work Sans, Arial, sans-serif;
   
 }
 .careers-text p {
@@ -402,8 +409,7 @@ body {
   line-height: 1.5;
 }
 
-
-/* Cities */
+/* CIties */
 .cities {
   padding: 0px 20px;
   text-align: center;
@@ -433,10 +439,19 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth lift and shadow transition */
+}
+.city-box:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Enhanced shadow */
 }
 .city-box img {
   width: 100%;
   display: block;
+  transition: transform 0.4s ease;
+}
+.city-box:hover img {
+  transform: scale(1.05); /* Subtle zoom on hover */
 }
 .city-info {
   padding: 20px;
@@ -468,11 +483,13 @@ body {
   padding: 12px 20px;
   position: relative;
   vertical-align: middle;
-} 
+}
 .city-info .btn:hover {
   background-color: #286dc0;
 }
 
+/* Ensure font is loaded */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
 
 /* Join Us */
 .join-section {
@@ -488,10 +505,10 @@ body {
 }
 .join-title {
     color: #333;
-    font-size: 1.1428571429em;
+    font-size: 24px;
     margin-bottom: .75em;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 100;
 }
 .join-btn {
   font-family: Roboto, Arial, sans-serif;
@@ -515,14 +532,17 @@ body {
 .main-footer {
     font-family: Roboto, Arial, sans-serif;
     border-top: 1px solid #eef2f2;
-    padding: 2em ;
+    padding: 2em;
     text-align: center; 
     font-size: 10px;
     color: #ababab;
+    word-spacing: -2px; /* Réduit l'espace entre les mots */
 }
+
 footer a {
-  color: #3d83df;
-  text-decoration: none;
+    color: #3d83df;
+    text-decoration: none;
+    word-spacing: -2px;
 }
 
 
